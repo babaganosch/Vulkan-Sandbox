@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46D8B51A248F775700DDF35E /* VulkanRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46D8B518248F775700DDF35E /* VulkanRenderer.cpp */; };
 		46E79C6D248AC88C004B1C91 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46E79C6C248AC88C004B1C91 /* main.cpp */; };
+		46E79C75248ACE16004B1C91 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E79C74248ACE15004B1C91 /* libglfw.3.3.dylib */; };
+		46E79C7A248ACEC5004B1C91 /* libMoltenVKGLSLToSPIRVConverter.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E79C78248ACEC5004B1C91 /* libMoltenVKGLSLToSPIRVConverter.dylib */; };
+		46E79C7C248ACEC5004B1C91 /* libMoltenVK.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E79C79248ACEC5004B1C91 /* libMoltenVK.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +27,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		46D8B518248F775700DDF35E /* VulkanRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VulkanRenderer.cpp; sourceTree = "<group>"; };
+		46D8B519248F775700DDF35E /* VulkanRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VulkanRenderer.hpp; sourceTree = "<group>"; };
+		46D8B51B248F90B600DDF35E /* Utilities.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utilities.hpp; sourceTree = "<group>"; };
 		46E79C69248AC88C004B1C91 /* Vulkan Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Vulkan Sandbox"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E79C6C248AC88C004B1C91 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		46E79C74248ACE15004B1C91 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		46E79C78248ACEC5004B1C91 /* libMoltenVKGLSLToSPIRVConverter.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMoltenVKGLSLToSPIRVConverter.dylib; path = "../../../../usr/local/Cellar/molten-vk/1.0.41_1/lib/libMoltenVKGLSLToSPIRVConverter.dylib"; sourceTree = "<group>"; };
+		46E79C79248ACEC5004B1C91 /* libMoltenVK.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMoltenVK.dylib; path = "../../../../usr/local/Cellar/molten-vk/1.0.41_1/lib/libMoltenVK.dylib"; sourceTree = "<group>"; };
+		46E79C7E248ACFEE004B1C91 /* Vulkan Sandbox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vulkan Sandbox.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E79C75248ACE16004B1C91 /* libglfw.3.3.dylib in Frameworks */,
+				46E79C7A248ACEC5004B1C91 /* libMoltenVKGLSLToSPIRVConverter.dylib in Frameworks */,
+				46E79C7C248ACEC5004B1C91 /* libMoltenVK.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +57,7 @@
 			children = (
 				46E79C6B248AC88C004B1C91 /* Vulkan Sandbox */,
 				46E79C6A248AC88C004B1C91 /* Products */,
+				46E79C73248ACE15004B1C91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +72,23 @@
 		46E79C6B248AC88C004B1C91 /* Vulkan Sandbox */ = {
 			isa = PBXGroup;
 			children = (
+				46E79C7E248ACFEE004B1C91 /* Vulkan Sandbox.entitlements */,
 				46E79C6C248AC88C004B1C91 /* main.cpp */,
+				46D8B518248F775700DDF35E /* VulkanRenderer.cpp */,
+				46D8B519248F775700DDF35E /* VulkanRenderer.hpp */,
+				46D8B51B248F90B600DDF35E /* Utilities.hpp */,
 			);
 			path = "Vulkan Sandbox";
+			sourceTree = "<group>";
+		};
+		46E79C73248ACE15004B1C91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46E79C79248ACEC5004B1C91 /* libMoltenVK.dylib */,
+				46E79C78248ACEC5004B1C91 /* libMoltenVKGLSLToSPIRVConverter.dylib */,
+				46E79C74248ACE15004B1C91 /* libglfw.3.3.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E79C6D248AC88C004B1C91 /* main.cpp in Sources */,
+				46D8B51A248F775700DDF35E /* VulkanRenderer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +173,7 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -176,6 +206,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -201,7 +232,7 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -228,6 +259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -238,20 +270,36 @@
 		46E79C71248AC88C004B1C91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Vulkan Sandbox/Vulkan Sandbox.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2786ERZGHU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.2/lib,
+					"/usr/local/Cellar/molten-vk/1.0.41_1/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		46E79C72248AC88C004B1C91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Vulkan Sandbox/Vulkan Sandbox.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2786ERZGHU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.2/lib,
+					"/usr/local/Cellar/molten-vk/1.0.41_1/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
